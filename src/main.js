@@ -8,7 +8,7 @@ import { navigation } from "./navigation";
 navigation();
 
 const wavesBackground = new FlowingWavesBackground("canvas-container");
-wavesBackground.init();
+// wavesBackground.init();
 
 // Initialize scroll page functionality when DOM is ready
 document.addEventListener("DOMContentLoaded", async function () {

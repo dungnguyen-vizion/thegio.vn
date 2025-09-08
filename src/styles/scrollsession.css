@@ -31,7 +31,6 @@ body {
   padding: 0;
   height: 100vh;
   color: var(--light);
-  text-transform: uppercase;
   background: var(--color-bg-circle-1);
 }
 
