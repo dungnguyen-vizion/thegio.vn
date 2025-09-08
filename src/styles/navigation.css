@@ -10,6 +10,10 @@
   position: fixed;
   right: 10px;
   top: 10px;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
 }
 .nav-button:focus {
   outline: none;
@@ -33,6 +37,14 @@
   z-index: 1;
   transform: translateX(100%);
   transition: transform 0.5s ease;
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    transform: translateX(0%);
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+    justify-content: space-around;
+  }
 }
 
 .navigate-items.open {
