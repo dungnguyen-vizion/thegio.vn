@@ -1,7 +1,11 @@
 import FlowingWavesBackground from "./waves";
 import ScrollPageController from "./scrollPage";
-import "./style.css";
-import "./scrollsession.css";
+import "./styles/style.css";
+import "./styles/scrollsession.css";
+import "./styles/navigation.css";
+import { navigation } from "./navigation";
+
+navigation();
 
 const wavesBackground = new FlowingWavesBackground("canvas-container");
 wavesBackground.init();
