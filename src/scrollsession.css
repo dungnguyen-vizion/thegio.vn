@@ -1,0 +1,153 @@
+:root {
+  --bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.1) 0%
+  );
+  --color-bg-circle-1: radial-gradient(
+    circle,
+    var(--color-normal-highlight) 0%,
+    var(--color-normal-light) 50%,
+    var(--color-normal-brown) 100%
+  );
+
+  --color-normal-highlight: #fef4e7;
+  --color-normal-light: #e8d2b4;
+  --color-normal-brown: #c49776;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  color: var(--color-surface-white);
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: var(--light);
+  text-transform: uppercase;
+  background: var(--color-bg-circle-1);
+}
+
+h2 {
+  font-size: clamp(1rem, 8vw, 10rem);
+  font-weight: 600;
+  text-align: center;
+  margin-right: -0.5em;
+  width: 90vw;
+  max-width: 1200px;
+  text-transform: none;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  height: 7em;
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+  left: 0;
+
+  .outer,
+  .inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+
+    h2 {
+      z-index: 999;
+    }
+
+    .clip-text {
+      overflow: hidden;
+    }
+  }
+}
+
+.first {
+  .bg {
+    background: var(--color-bg-circle-1);
+  }
+}
+
+.second {
+  .bg {
+    background-image: var(--bg-gradient),
+      url("https://thegio.vn/pictures/catalog/background/1.jpg");
+  }
+}
+
+.third {
+  .bg {
+    background-image: var(--bg-gradient),
+      url("https://assets.codepen.io/16327/site-landscape-2.jpg");
+  }
+}
+
+.fourth {
+  .bg {
+    background-image: var(--bg-gradient),
+      url("https://assets.codepen.io/16327/site-landscape-6.jpg");
+  }
+}
+
+.fifth {
+  .bg {
+    background-image: var(--bg-gradient),
+      url("https://assets.codepen.io/16327/site-landscape-8.jpg");
+    background-position: 50% 45%;
+  }
+}
+
+h2 * {
+  will-change: transform;
+}
+
+.section-heading span {
+  color: white;
+}
+
+.wave,
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  /* -webkit-mask-image: url("/public/wave.png");
+  mask-image: url("/public/wave.png");
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat; */
+}

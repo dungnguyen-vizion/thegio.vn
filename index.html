@@ -1,21 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <!-- Add PIXI.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.9/pixi.min.js"></script>
   </head>
   <body>
-      <div id="canvas-container"></div>
+    <!-- Add canvas element for displacement effect -->
+    <header id="navigate-container"></header>
     <div id="app">
-
-          <div class="content">
-              <div>
-                  <div class="logo">Your Content</div>
-                  <div class="subtitle">Background Ready</div>
-              </div>
+      <section class="first">
+        <div class="outer">
+          <div class="inner">
+            <div class="bg one">
+              <div id="canvas-container"></div>
+              <h2 class="section-heading">Thuận Việt</h2>
+            </div>
           </div>
+        </div>
+      </section>
+      <section class="second">
+        <div class="outer">
+          <div class="inner">
+            <!-- <div class="wave">
+              <img src="https://thegio.vn/pictures/catalog/background/1.jpg" />
+            </div> -->
+            <div class="bg">
+              <!-- <canvas id="canvas"></canvas> -->
+              <h2 class="section-heading">Animated with GSAP</h2>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
